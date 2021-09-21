@@ -48,7 +48,7 @@ users = ['Jhon','Malcom','Selly','David','Linda','Andy','Margaret','Lisa','Simon
  
  
 # KEYS
-admin_key = 'dCXoi1290sa21n9a'
+# admin_key = 'dCXoi1290sa21n9a' # future improvement
 proof = 42
 
 
@@ -59,17 +59,16 @@ blockchain.add_block(first_block)
 
 print('Blockchain up and running ...')
 
-while True:
+if __name__ == '__main__':
+    while True:
+        if new_transaction==True:
+            sender = rnd.choice(users) # RANDOM BLOCKCHAIN CONTENT , this could be a transaction, strat/end of some service or another DeFi App
+            reciver = rnd.choice(users)
+            amount=rnd.random()
+            block_content = '{0} has send to {1}  \t\t {2} of vox coin'.format(sender,reciver,round(amount,7))
 
+            next_block = blockchain.create_block(proof,previous_hash=blockchain.previous_hash_block, block_data=block_content) 
+            blockchain.add_block(next_block)
 
-    sender = rnd.choice(users) # RANDOM BLOCKCHAIN CONTENT , this could be a transaction, strat/end of some service or another DeFi App
-    reciver = rnd.choice(users)
-    amount=rnd.random()
-    block_content = '{0} has send to {1}  \t {2} number of vox coin'.format(sender,reciver,amount)
-
-
-    next_block = blockchain.create_block(proof,previous_hash=blockchain.previous_hash_block, block_data=block_content) 
-    blockchain.add_block(next_block)
-    
-    blockchain.show_last_block()
-    time.sleep(1)
+            blockchain.show_last_block()
+            time.sleep(2)
