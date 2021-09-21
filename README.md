@@ -13,3 +13,5 @@ Business runs on information. The faster it’s received and the more accurate i
 2. source /venv/bin/activate
 3. pip3 install -r requirements.txt
 4. python3 voxchain.py
+
+![Screenshot](/img/output.png)
