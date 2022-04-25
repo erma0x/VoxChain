@@ -7,11 +7,19 @@ Blockchain is a shared, immutable ledger that facilitates the process of recordi
 #### Why blockchain is important:
 Business runs on information. The faster it’s received and the more accurate it is, the better. Blockchain is ideal for delivering that information because it provides immediate, shared and completely transparent information stored on an immutable ledger that can be accessed only by permissioned network members. A blockchain network can track orders, payments, accounts, production and much more. And because members share a single view of the truth, you can see all details of a transaction end to end, giving you greater confidence, as well as new efficiencies and opportunities.
 
+<br>
 
-#### Usage
-1. python3 -m venv venv
-2. source /venv/bin/activate
-3. pip3 install -r requirements.txt
-4. python3 voxchain.py
+#### How to install
+1. ```python3 -m venv venv```
+2. ```source /venv/bin/activate```
+3. ```pip3 install -r requirements.txt```
+
+#### How to run
+```python3 voxchain.py```
+
+<br>
+
+
+#### Program execution example
 
 ![Screenshot](/img/output.png)
